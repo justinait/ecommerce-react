@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       < NavBar />
-      <ItemListContainer greeting="Más vendidos"/>
-      <ItemListContainer greeting="Más recientes"/>
-      <ItemListContainer greeting="Premiados"/>
+      < ItemListContainer greeting="Flores"/>
+      < ItemListContainer greeting="Paisaje entrerriano"/>
+      < ItemListContainer greeting="Paisaje santafesino"/>
     </div>
   );
 }

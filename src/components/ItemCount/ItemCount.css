@@ -1,0 +1,23 @@
+.ItemCountContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 400px;
+}
+
+.ItemCountContainer > button{
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1.5px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+.ItemCountContainer > button:hover {
+    background-color: grey;
+    color:white;
+}
+
+.ItemCountContainer > p{
+    margin:auto
+}
