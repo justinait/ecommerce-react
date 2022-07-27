@@ -9,6 +9,7 @@ const Item = ({data}) => {
     return (
         <div>
             <p>{name} - ${retail}</p>
+            <img src={image} alt="" />
             < ItemCount stock="10" />
         </div>
     );

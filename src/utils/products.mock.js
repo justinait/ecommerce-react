@@ -5,7 +5,7 @@ const products = [
     "cost": 321,
     "wholesale": 472,
     "retail": 628,
-    "image": "/images/paintings/landscape/puenteColgante.jpg"
+    "image": "../../images/pet 900.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@ const products = [
     "cost": 490,
     "wholesale": 742,
     "retail": 857,
-    "image": "/images/paintings/landscape/tilcara.jpg"
+    "image": "../../images/pet 900.jpg"
   },
   {
     "id": "3",
@@ -21,14 +21,14 @@ const products = [
     "cost": 420,
     "wholesale": 665,
     "retail": 811,
-    "image": "/images/paintings/landscape/1624521295580.jpg"
+    "image": "../../images/vidrio 500.jpg"
   },
   {
     "name": "Vidrio 900",
     "cost": 520,
     "wholesale": 872,
     "retail": 1010,
-    "image": "/images/paintings/humanFigure/1624401158097.jpg",
+    "image": "../../images/vidrio 900.jpg",
     "id": 4
   },
   {
@@ -36,7 +36,7 @@ const products = [
     "cost": 1056,
     "wholesale": 1577,
     "retail": 1867,
-    "image": "/images/paintings/stillLife/1624603001642.jpg",
+    "image": "../../images/bidon 5l.jpg",
     "id": 5
   },
   {
@@ -44,7 +44,7 @@ const products = [
     "cost": 2571,
     "wholesale": 3765,
     "retail": 4072,
-    "image": "/images/paintings/stillLife/1624603001642.jpg",
+    "image": "../../images/bidon 5l.jpg",
     "id": 5
   }
 ]
