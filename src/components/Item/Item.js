@@ -1,10 +1,14 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount'
 
-const Item = ({title}) => {
+const Item = ({data}) => {
+
+    const {name, cost, wholesale, retail, image} = data;
+
+
     return (
         <div>
-            <h2>{title}</h2>
+            <p>{name} - ${retail}</p>
             < ItemCount stock="10" />
         </div>
     );
