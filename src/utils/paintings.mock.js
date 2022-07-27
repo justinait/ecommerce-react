@@ -1,41 +1,52 @@
-const paintings = [
+const products = [
   {
     "id": 1,
-    "title": "Puente colgante",
-    "high": "60",
-    "width": "90",
-    "category": "landscape",
-    "mainImage": "/images/paintings/landscape/puenteColgante.jpg"
+    "name": "PET 500",
+    "cost": 321,
+    "wholesale": 472,
+    "retail": 628,
+    "image": "/images/paintings/landscape/puenteColgante.jpg"
   },
   {
     "id": 2,
-    "title": "Tilcara",
-    "high": "60",
-    "width": "90",
-    "mainImage": "/images/paintings/landscape/tilcara.jpg"
+    "name": "PET 900",
+    "cost": 490,
+    "wholesale": 742,
+    "retail": 857,
+    "image": "/images/paintings/landscape/tilcara.jpg"
   },
   {
     "id": "3",
-    "title": "y si me dejas un lugarcito",
-    "high": "70",
-    "width": "90",
-    "serieName": "",
-    "mainImage": "/images/paintings/landscape/1624521295580.jpg"
+    "name": "Vidrio 500",
+    "cost": 420,
+    "wholesale": 665,
+    "retail": 811,
+    "image": "/images/paintings/landscape/1624521295580.jpg"
   },
   {
-    "title": "violinista",
-    "high": "50",
-    "width": "30",
-    "mainImage": "/images/paintings/humanFigure/1624401158097.jpg",
+    "name": "Vidrio 900",
+    "cost": 520,
+    "wholesale": 872,
+    "retail": 1010,
+    "image": "/images/paintings/humanFigure/1624401158097.jpg",
     "id": 4
   },
   {
-    "title": "espejo",
-    "high": "60",
-    "width": "100",
-    "mainImage": "/images/paintings/stillLife/1624603001642.jpg",
+    "name": "Bidón 2L",
+    "cost": 1056,
+    "wholesale": 1577,
+    "retail": 1867,
+    "image": "/images/paintings/stillLife/1624603001642.jpg",
+    "id": 5
+  },
+  {
+    "name": "Bidón 5L",
+    "cost": 2571,
+    "wholesale": 3765,
+    "retail": 4072,
+    "image": "/images/paintings/stillLife/1624603001642.jpg",
     "id": 5
   }
 ]
 
-export default paintings;
+export default products;
