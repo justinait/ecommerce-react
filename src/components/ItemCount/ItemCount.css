@@ -1,7 +1,7 @@
 .ItemCountContainer {
     display: flex;
     flex-direction: row-reverse;
-    padding: 20px 400px;
+    padding: 20px 33%;
 }
 
 .ItemCountContainer > button{

@@ -21,14 +21,14 @@ const products = [
     "cost": 420,
     "wholesale": 665,
     "retail": 811,
-    "image": "../../images/vidrio 500.jpg"
+    "image": "../../images/vidrio 500.png"
   },
   {
     "name": "Vidrio 900",
     "cost": 520,
     "wholesale": 872,
     "retail": 1010,
-    "image": "../../images/vidrio 900.jpg",
+    "image": "../../images/vidrio 500.png",
     "id": 4
   },
   {
