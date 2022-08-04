@@ -45,7 +45,7 @@ const products = [
     "wholesale": 3765,
     "retail": 4072,
     "image": "../../images/bidon 5l.jpg",
-    "id": 5
+    "id": 6
   }
 ]
 

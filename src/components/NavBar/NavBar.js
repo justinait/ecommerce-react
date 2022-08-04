@@ -8,11 +8,11 @@ function NavBar() {
   return (
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#products">Aceite de Oliva</Navbar.Brand>
+          <Navbar.Brand href="/">Aceite de Oliva</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#products">Productos</Nav.Link>
+              <Nav.Link href="/">Productos</Nav.Link>
               <Nav.Link href="#about">Sobre nosotros</Nav.Link>
               <Nav.Link href="#contact">Contacto</Nav.Link>
             </Nav>
