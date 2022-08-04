@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import products from "../../utils/products.mock"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
+    
     const [productData, setProductData] = useState({})
-    const id = 1;
+    
+    const { id } = useParams();
+
     useEffect( () => {
         filterById()
     }, [id])
