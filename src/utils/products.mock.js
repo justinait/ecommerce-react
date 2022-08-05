@@ -2,6 +2,7 @@ const products = [
   {
     "id": 1,
     "name": "PET 500",
+    "category": "pet",
     "cost": 321,
     "wholesale": 472,
     "retail": 628,
@@ -10,6 +11,7 @@ const products = [
   {
     "id": 2,
     "name": "PET 900",
+    "category": "pet",
     "cost": 490,
     "wholesale": 742,
     "retail": 857,
@@ -18,6 +20,7 @@ const products = [
   {
     "id": "3",
     "name": "Vidrio 500",
+    "category": "vidrio",
     "cost": 420,
     "wholesale": 665,
     "retail": 811,
@@ -25,6 +28,7 @@ const products = [
   },
   {
     "name": "Vidrio 900",
+    "category": "vidrio",
     "cost": 520,
     "wholesale": 872,
     "retail": 1010,
@@ -33,6 +37,7 @@ const products = [
   },
   {
     "name": "Bidón 2L",
+    "category": "pet",
     "cost": 1056,
     "wholesale": 1577,
     "retail": 1867,
@@ -41,6 +46,7 @@ const products = [
   },
   {
     "name": "Bidón 5L",
+    "category": "pet",
     "cost": 2571,
     "wholesale": 3765,
     "retail": 4072,

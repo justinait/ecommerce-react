@@ -13,11 +13,13 @@ function App() {
         <Routes>
 
           <Route path='/' element={< ItemListContainer section="Mas vendidos" />} />
+          <Route path='/category' element={< ItemListContainer />} />
+          <Route path='/category/:category' element={< ItemListContainer />} />
+          
+          <Route path='/item/:id' element={< ItemDetailContainer />} />         
+
           <Route path='*' element={ <h1>ERROR 404</h1> } />
 
-          <Route path='/item/:id' element={< ItemDetailContainer />} />
-          <Route path='/category/:id' element={< ItemListContainer />} />
-          
         </Routes>
 
       </BrowserRouter>
