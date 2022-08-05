@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css'
 
@@ -9,10 +10,16 @@ const Item = ({data}) => {
 
     return (
         <div className='productContainer'>
-            <p>{name} - ${retail}</p>
-            <img src={image} alt={name} className='productImg' />
+            
+            <Link to={`/item/${data.id}`}  style = {{textDecoration: "none", color: 'black'}}>
+                <p>{name} - ${retail}</p>
+                <img src={image} alt={name} className='productImg' />
+            </Link>
+
             < ItemCount stock="10" />
+
         </div>
+        
     );
 };
 
