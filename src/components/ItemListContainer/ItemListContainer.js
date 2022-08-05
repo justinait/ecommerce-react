@@ -9,7 +9,6 @@ const ItemListContainer = ({section}) => {
     const {category} = useParams();
 
     let categoryList = products.filter( e => {
-        console.log(e.category, category);
         return e.category == category
     })
 
