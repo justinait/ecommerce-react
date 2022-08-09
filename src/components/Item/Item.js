@@ -7,7 +7,6 @@ const Item = ({data}) => {
 
     const {name, cost, wholesale, retail, image} = data;
 
-
     return (
         <div className='productContainer'>
             
@@ -16,7 +15,7 @@ const Item = ({data}) => {
                 <img src={image} alt={name} className='productImg' />
             </Link>
 
-            < ItemCount stock="10" />
+            {/*< ItemCount stock="10" />*/}
 
         </div>
         
