@@ -3,13 +3,18 @@ import { Button } from 'react-bootstrap';
 import { CartContext } from '../../context/CartProvider';
 
 const Cart = () => {
-    const { cartProducts, removeItem } = useContext(CartContext)
+    const { cartProducts, removeItem, clear } = useContext(CartContext)
     useEffect(() => {
 
     }, [cartProducts])
     return (
         <div>
             <p>Tu carrito</p>
+            {console.log({cartProducts})}
+            {
+                cartProducts.length > 0 ? <Button variant="outline-dark" onClick={clear}> Vaciar carrito </Button> : ""
+            }
+            
             {
                 cartProducts.map((e) => {
                     return (
