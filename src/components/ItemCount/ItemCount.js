@@ -1,12 +1,13 @@
-import {useState, React} from 'react';
+import {useState, React, useContext} from 'react';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartProvider';
 import './ItemCount.css'
 
-const ItemCount = ({stock}) => {
-    
+const ItemCount = ({stock, setAmount, productToAdd}) => {
+
+    const { addItem } = useContext(CartContext)
+
     const [count, setCount] = useState(1);
-    const [amount, setAmount] = useState(0);
     
     function onAdd () {
         if ( stock > count ){
@@ -18,6 +19,10 @@ const ItemCount = ({stock}) => {
         if( count > 0)   setCount ( count - 1 )
     }
 
+    const addToCart = () => {
+        setAmount(count);
+        addItem( productToAdd );
+    }
     return (
         <div>
             <div className='ItemCountContainer'>
@@ -25,12 +30,8 @@ const ItemCount = ({stock}) => {
                 <p> { count } </p>
                 <button onClick={ onRemove }> - </button>
             </div>
-
-            {
-                ( amount > 0) ? <Link to='/cart'> <Button variant="outline-dark">Terminar compra</Button> </Link> : 
-                <Button variant="outline-dark" onClick={()=> setAmount(count)}> Agregar al carrito </Button>
-            }
             
+            <Button variant="outline-dark" onClick={addToCart}> Agregar al carrito </Button>
 
         </div>
     );
