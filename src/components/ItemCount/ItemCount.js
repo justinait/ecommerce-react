@@ -20,7 +20,7 @@ const ItemCount = ({stock, setAmount, productToAdd}) => {
     }
 
     const addToCart = () => {
-        setAmount(count);
+        setAmount( count );
         addItem( productToAdd );
     }
     return (
