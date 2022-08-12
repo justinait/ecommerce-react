@@ -24,18 +24,17 @@ const CartWidget = () => {
                     }
                     
                     {
-                    cartProducts.map((e) => {
-                        return (
-                            <div key={e.id} >
-                                <div>
-                                    <h1> {e.name} </h1>
-                                    <img src={e.image} alt={e.name} />
-                                    <h3> $ {e.retail} </h3>
-                                </div>
-                                <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
+                    cartProducts.map((e) => (                      
+                    
+                        <div key={e.id} >
+                            <div>
+                                <h1> {e.name} </h1>
+                                <img src={e.image} alt={e.name} />
+                                <h3> $ {e.retail} </h3>
                             </div>
-                        )
-                    })
+                            <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
+                        </div>
+                    ))
                     }
                 </Dropdown.Menu>
             </Dropdown>
