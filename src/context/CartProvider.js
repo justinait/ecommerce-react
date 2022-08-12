@@ -8,7 +8,13 @@ const CartProvider = ({ children }) => {
     const [cartProducts, setCartProducts] = useState([]);
 
     const addItem = (productToAdd) => {
-        setCartProducts( [...cartProducts, productToAdd])
+        
+        let isInCart = cartProducts.find(e => e.id === productToAdd.id)
+        
+        if(!isInCart) {
+            return setCartProducts(cartProducts => [...cartProducts, productToAdd])
+        }
+        
     }
 
     const removeItem = (id) => {
@@ -21,7 +27,7 @@ const CartProvider = ({ children }) => {
     const clear = () => {   setCartProducts([])    }
 
     const isInCart = (id) => {
-        cartProducts.map((e) => e.id == id)
+        cartProducts.some((e) => e.id == id)
     }
 
     return (
