@@ -10,8 +10,9 @@ const ItemDetail = ({data}) => {
     const [amount, setAmount] = useState(0);
 
     return(
-
+        
         <div className='productDetailContainer'>
+            {   console.log({amount}) }
             <div className='imgContainer'>
                 <img src={data.image} alt='{data.name}' width="200"/>
             </div>

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { CartContext } from '../../context/CartProvider';
 import CartWidget from './CartWidget';
 
 function NavBar() {
+
+  const { cartProducts } = useContext(CartContext);
+
   return (
       <Navbar bg="light" expand="lg">
         <Container>
@@ -23,7 +27,7 @@ function NavBar() {
             </Nav>
           </Navbar.Collapse>
         </Container>
-        <CartWidget />
+        {          cartProducts.length > 0 && <CartWidget />       }
       </Navbar>
     
   );

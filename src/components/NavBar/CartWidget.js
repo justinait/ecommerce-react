@@ -6,19 +6,17 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 const CartWidget = () => {
     const { cartProducts, removeItem, clear } = useContext(CartContext)
-    useEffect(() => {
-
-    }, [cartProducts])
-
+    
     return (
         <div>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     <BsCartFill />
+                    <p>{cartProducts.length}</p>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                     <p>Tu carrito</p>
-                    {   console.log({cartProducts}) }
+
                     {
                     cartProducts.length > 0 ? <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button> : ""
                     }
@@ -26,7 +24,7 @@ const CartWidget = () => {
                     {
                     cartProducts.map((e) => (                      
                     
-                        <div key={e.id} >
+                        <div key={e.id.toString()} >
                             <div>
                                 <h1> {e.name} </h1>
                                 <img src={e.image} alt={e.name} />
