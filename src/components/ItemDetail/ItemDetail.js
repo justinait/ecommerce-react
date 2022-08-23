@@ -6,7 +6,7 @@ import './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
     const brand = 'Valle Gran';
-
+    const productTitle = 'Aceite de Oliva Extra Virgen';
     const [amount, setAmount] = useState(0);
 
     return(
@@ -21,7 +21,7 @@ const ItemDetail = ({data}) => {
 
                 <h1> {data.name} </h1>
                 <h2> {brand} </h2>
-                <h2> {data.productTitle} </h2>
+                <h2> {productTitle} </h2>
                 <p className='price'>$ {data.retail} </p>
 
                 <h6> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem minus doloribus animi temporibus ipsam repellat voluptatem dolorem. </h6>
@@ -31,7 +31,7 @@ const ItemDetail = ({data}) => {
             {
                 ( amount > 0) ? 
                 <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link> : 
-                < ItemCount stock='10' setAmount={setAmount} productToAdd={data}/>        
+                < ItemCount setAmount={setAmount} productToAdd={data}/>        
             }
         </div>
     )

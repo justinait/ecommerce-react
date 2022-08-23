@@ -14,7 +14,6 @@ const Item = ({data}) => {
                 <p>{name} - ${retail}</p>
                 <img src={image} alt={name} className='productImg' />
             </Link>
-            {/*< ItemCount stock="10" />*/}
 
         </div>
         

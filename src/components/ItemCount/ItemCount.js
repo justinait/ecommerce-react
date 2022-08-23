@@ -3,14 +3,14 @@ import Button from 'react-bootstrap/Button';
 import { CartContext } from '../../context/CartProvider';
 import './ItemCount.css'
 
-const ItemCount = ({stock, setAmount, productToAdd}) => {
+const ItemCount = ({ setAmount, productToAdd }) => {
 
     const { addItem } = useContext(CartContext)
 
     const [count, setCount] = useState(1);
     
     function onAdd () {
-        if ( stock > count ){
+        if ( productToAdd.stock > count ){
             return setCount ( count + 1 );
         }
     }
