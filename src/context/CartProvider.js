@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { createContext } from 'react';
 
-let totalPrice = 0;
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
 
     const [cartProducts, setCartProducts] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addItem = (productToAdd) => {
         
-        totalPrice = totalPrice + productToAdd.retail;
+        setTotalPrice(totalPrice + productToAdd.retail);
 
         let isInCart = cartProducts.find(e => e.id === productToAdd.id)
 
@@ -22,7 +22,7 @@ const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         const newCart = cartProducts.filter((e) => {
-            totalPrice = totalPrice - e.retail;
+            setTotalPrice(totalPrice - e.retail)
             return e.id != id;
         })
         setCartProducts(newCart);
@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
 
     const clear = () => {   
         setCartProducts([])    
-        totalPrice = 0;
+        setTotalPrice(0)
     }
 
     const isInCart = (id) => {
