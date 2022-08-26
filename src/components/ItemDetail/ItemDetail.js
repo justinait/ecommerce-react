@@ -12,7 +12,7 @@ const ItemDetail = ({data}) => {
     return(
         
         <div className='productDetailContainer'>
-            {   console.log({amount}) }
+            
             <div className='imgContainer'>
                 <img src={data.image} alt='{data.name}' width="200"/>
             </div>
