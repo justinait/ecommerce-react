@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 import { CartContext } from '../../context/CartProvider';
 import './Cart.css'
-import Modal from '../Modal/Modal';
 import ModalDemo from '../Modal/Modal';
+import { useState } from 'react';
 
 const Cart = () => {
     const { cartProducts, removeItem, clear, totalPrice } = useContext(CartContext)
@@ -12,7 +12,6 @@ const Cart = () => {
     return (
         <div>
             <p>Tu carrito</p>
-            
             
             <ModalDemo />
             
