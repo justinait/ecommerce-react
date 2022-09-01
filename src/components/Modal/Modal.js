@@ -1,40 +1,56 @@
+import { addDoc, collection } from 'firebase/firestore';
 import React, { useState } from 'react';
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { CartContext } from '../../context/CartProvider';
+import db from '../../firebaseConfig';
+
 
 const ModalDemo = () => {
+
+  const { cartProducts } = useContext(CartContext)
+
   const [show, setShow] = useState(false);
+
   const [formData, setFormData] = useState([{
     name: '',
     email: '',
     phone: 0
     }])
 
-  const [order, setOrder] = useState([{
+  const [order, setOrder] = useState({
     buyer: {},
-    items: [],
+    items: cartProducts,
     total: 0
-    }])
+    })
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name] : e.target.value})
-
   }
 
-  const handleOrder = () => {
+  const handleOrder = (e) => {
+    e.preventDefault();   //pq sino al submitear un formulario se recarga la pagina
+    pushData({...order, buyer: formData});
     handleClose();
-   // setOrder(buyer( formData))  // como se hace para un state array jej
-    console.log(order);
+  }
+
+  const pushData = async (newOrder) => {
+
+    const orderCollection = collection(db, 'orders')
+    //seleccionamos el documento
+    const orderDoc = await addDoc(orderCollection, newOrder)
+    console.log('orden generau', orderDoc);
   }
 
   return (
     <>
         <Button variant="primary" onClick={handleShow}>
-            PAGAR
+          Pagar
         </Button>
             
       <Modal show={show} onHide={handleClose}>
@@ -60,7 +76,7 @@ const ModalDemo = () => {
             >
               <Form.Label>Nombre</Form.Label>
               <Form.Control 
-                //as="textarea"
+                as="textarea"
                 rows={1}
                 type="text"
                 name="name"
@@ -75,14 +91,13 @@ const ModalDemo = () => {
             >
               <Form.Label>Telefono</Form.Label>
               <Form.Control 
-                //as="textarea"
+                as="textarea"
                 rows={1}
                 type="number"
                 name="phone"
                 value={formData.phone}
                 placeholder="123456789"
                 onChange={handleChange}
-                //onchange, setea el coso y aca value t muestra el coso seteado
                 />
             </Form.Group>
           </Form>
@@ -91,7 +106,7 @@ const ModalDemo = () => {
           <Button variant="secondary" onClick={handleClose}>
             Cancelar
           </Button>
-          <Button variant="primary" onClick={handleOrder}>
+          <Button variant="primary" onClick={handleOrder} type='submit'>
             Guardar
           </Button>
         </Modal.Footer>

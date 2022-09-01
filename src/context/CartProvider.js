@@ -7,6 +7,7 @@ const CartProvider = ({ children }) => {
 
     const [cartProducts, setCartProducts] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0)
+    const [totalProducts, setTotalProducts] = useState(0)
 
     const addItem = (productToAdd) => {
         
@@ -15,6 +16,8 @@ const CartProvider = ({ children }) => {
         let isInCart = cartProducts.find(e => e.id === productToAdd.id)
 
         if(!isInCart) {
+            //setTotalProducts(totalProducts + amount)
+            setTotalPrice(totalPrice + productToAdd.retail)//retail*amount (o como lo resuelva)
             return setCartProducts(cartProducts => [...cartProducts, productToAdd])
         }
         
