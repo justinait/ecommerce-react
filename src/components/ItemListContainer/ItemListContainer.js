@@ -4,21 +4,11 @@ import { useParams } from 'react-router-dom';
 import { getDocs, collection } from 'firebase/firestore'
 import db from '../../firebaseConfig';
 
-const ItemListContainer = ({section}) => {
+const ItemListContainer = () => {
 
     const [listProducts, setListProducts] = useState([])
     const {category} = useParams();
 
-    // const getProducts = new Promise( (resolve, reject) => {
-    //     setTimeout( () => {
-    //         if(category){
-    //             resolve(categoryList)
-    //         }
-    //         else{
-    //             resolve(products)
-    //         }
-    //     }, 2000)
-    // })
     const getProducts = async () => {
         const productCollection = collection(db, 'products')
         const productSnapshot = await getDocs(productCollection)
@@ -54,7 +44,6 @@ const ItemListContainer = ({section}) => {
 
     return(
         <div className='ItemListContainer'>
-            <h3>{section}</h3>
             <ItemList dataProducts={listProducts}/>
         </div>
     )

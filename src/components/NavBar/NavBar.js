@@ -10,8 +10,7 @@ function NavBar() {
 
   return (
     <div className="navbar">
-
-      <h1>Aceite de Oliva</h1>
+      <Link style = {{textDecoration: "none", color: 'black'}} to='/'><h1>Aceite de Oliva</h1></Link>
 
       <div className='rightNavbar'>
 

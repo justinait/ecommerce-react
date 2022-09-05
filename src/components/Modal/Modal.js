@@ -23,6 +23,7 @@ const ModalDemo = () => {
   const [order, setOrder] = useState({
     buyer: {},
     items: cartProducts,
+    date: new Date().toLocaleString(),
     total: 0
     })
 
@@ -40,7 +41,6 @@ const ModalDemo = () => {
   }
 
   const pushData = async (newOrder) => {
-
     const orderCollection = collection(db, 'orders')
     //seleccionamos el documento
     const orderDoc = await addDoc(orderCollection, newOrder)
