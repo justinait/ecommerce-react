@@ -11,8 +11,9 @@ const Item = ({data}) => {
         <div className='productContainer'>
             
             <Link to={`/item/${data.id}`}  style = {{textDecoration: "none", color: 'black'}}>
-                <p>{name} - ${retail}</p>
                 <img src={image} alt={name} className='productImg' />
+                <h4>{name}</h4>
+                <h5>${retail}</h5>
             </Link>
 
         </div>
