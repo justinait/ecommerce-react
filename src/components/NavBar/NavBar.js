@@ -17,7 +17,7 @@ function NavBar() {
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category'>Productos</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/pet'>Plastico</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/vidrio'>Vidrio</Link>  
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Sobre nosotros</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Sobre nosotros</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Contacto</Link>
 
         {          cartProducts.length > 0 && <CartWidget style={{backgroundColor: "black"}}/>       }
