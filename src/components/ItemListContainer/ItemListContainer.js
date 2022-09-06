@@ -7,7 +7,7 @@ import db from '../../firebaseConfig';
 const ItemListContainer = () => {
 
     const [listProducts, setListProducts] = useState([])
-    const {category} = useParams();
+    const { category } = useParams();
 
     const getProducts = async () => {
         const productCollection = collection(db, 'products')
@@ -22,10 +22,10 @@ const ItemListContainer = () => {
 
         if(category){
 
-            let categoryList = productList.filter( e => {
+            let categoryList = productList.filter( (e) => {
                 return e.category == category
             })//devuelve una lista de productos donde todos tienen como category la misma del params.
-        
+            
             return categoryList
         } 
         else {
@@ -35,11 +35,12 @@ const ItemListContainer = () => {
     }
 
     useEffect(() => {
+        
         getProducts()
             .then( (res) => { 
                 setListProducts(res)
             })
-    }, [])
+    }, [listProducts])
 
 
     return(
