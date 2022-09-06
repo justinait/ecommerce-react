@@ -10,5 +10,6 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 2% 5%;
 }
 /*# sourceMappingURL=ItemList.css.map */

@@ -14,13 +14,13 @@ function NavBar() {
 
       <div className='rightNavbar'>
 
-        <Link style = {{textDecoration: "none", color: 'black'}} to='/category'>Productos</Link>
-        <Link style = {{textDecoration: "none", color: 'black'}} to='/category/pet'>Plastico</Link>
-        <Link style = {{textDecoration: "none", color: 'black'}} to='/category/vidrio'>Vidrio</Link>  
-        <p>Sobre nosotros</p>
-        <p>Contacto</p>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category'>Productos</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/pet'>Plastico</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/vidrio'>Vidrio</Link>  
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Sobre nosotros</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Contacto</Link>
 
-        {          cartProducts.length > 0 && <CartWidget />       }
+        {          cartProducts.length > 0 && <CartWidget style={{backgroundColor: "black"}}/>       }
 
       </div>
     </div>

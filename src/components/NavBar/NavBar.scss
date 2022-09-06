@@ -1,10 +1,19 @@
-.navbar{
+$colorOlive: #818735;
+$colorOliveHover: #7c8047;
+$secondaryColor: #86895d;
+$navbarOptions: #fff;
+
+.navbar {
     display: flex;
     justify-content: space-around;
+    background-color: $colorOlive;
+    color: $navbarOptions;
+    font-weight: bold;
 }
 
 .rightNavbar {
     width: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
