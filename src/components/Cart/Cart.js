@@ -11,8 +11,7 @@ const Cart = () => {
 
     return (
         <div>
-            <p>Tu carrito</p>
-            
+
             <ModalDemo />
             
             {
@@ -40,7 +39,7 @@ const Cart = () => {
             }
             </div>
 
-            <p>${totalPrice}</p>
+            <h2>TOTAL DE LA COMPRA: ${totalPrice}</h2>
             
         </div>
     );
