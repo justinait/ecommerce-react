@@ -4,9 +4,10 @@ import { Button } from 'react-bootstrap';
 import { CartContext } from '../../context/CartProvider';
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../Cart/Cart.css'
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-    const { cartProducts, removeItem, clear } = useContext(CartContext)
+    const { cartProducts, removeItem } = useContext(CartContext)
     
     return (
         <div>
@@ -16,8 +17,9 @@ const CartWidget = () => {
                     <p>{cartProducts.length}</p>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className='widgetContainer'>
-                    <p>TU CARRITO</p>
                     
+                    <Link to='/cart' style = {{textDecoration: "none", color: 'black'}}> IR A TU CARRITO </Link>
+
                     {
                     cartProducts.map((e) => (                      
                     

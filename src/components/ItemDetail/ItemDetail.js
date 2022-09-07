@@ -9,6 +9,11 @@ const ItemDetail = ({data}) => {
     const productTitle = 'Aceite de Oliva Extra Virgen';
     const [amount, setAmount] = useState(0);
 
+    const optionsAfterAddingProduct = <>
+        <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link>
+        <Link to='/category'> <Button variant="outline-dark"> Continuar comprando </Button> </Link>
+    </>
+    
     return(
         
         <div className='productDetailContainer'>
@@ -32,8 +37,7 @@ const ItemDetail = ({data}) => {
                 </div>
 
                 {
-                    ( amount > 0) ? 
-                    <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link> : 
+                    ( amount > 0) ? optionsAfterAddingProduct : 
                     < ItemCount setAmount={setAmount} productToAdd={data}/>        
                 }
 
