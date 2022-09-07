@@ -15,25 +15,23 @@ const CartWidget = () => {
                     <BsCartFill/>
                     <p>{cartProducts.length}</p>
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <p>Tu carrito</p>
-
-                    {
-                    cartProducts.length > 0 ? <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button> : ""
-                    }
+                <Dropdown.Menu className='widgetContainer'>
+                    <p>TU CARRITO</p>
                     
                     {
                     cartProducts.map((e) => (                      
                     
                         <div key={e.id.toString()} >
-                            <div>
+                            <div className='widgetItemContainer'>
+                                <img className='widgetImage' src={e.image} alt={e.name} />
                                 <div className='mainDetails'>
-                                    <h1> {e.name} </h1>
-                                    <img src={e.image} alt={e.name} />
+                                    <h2> {e.name} </h2>
+                                    <h3> $ {e.retail} </h3>
+                                    <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
                                 </div>
-                                <h3> $ {e.retail} </h3>
+                                
                             </div>
-                            <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
+                            
                         </div>
                     ))
                     }

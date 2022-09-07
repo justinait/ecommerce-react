@@ -20,4 +20,25 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.widgetImage {
+  width: 100px;
+}
+
+.widgetItemContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 300px;
+  border: solid grey 1px;
+  border-radius: 2%;
+  height: 150px;
+}
+
+.widgetContainer {
+  border: solid grey 1px;
+  border-radius: 2%;
+}
 /*# sourceMappingURL=Cart.css.map */

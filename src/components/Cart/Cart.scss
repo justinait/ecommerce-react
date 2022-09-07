@@ -10,3 +10,21 @@
     margin-right: 20px;
     align-items: center;
 }
+
+.widgetImage {
+    width: 100px;
+}
+
+.widgetItemContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    border: solid grey 1px;
+    border-radius: 2%;
+    height: 150px; //igualno
+}
+
+.widgetContainer {
+    border: solid grey 1px;
+    border-radius: 2%
+}

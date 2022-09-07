@@ -44,7 +44,6 @@ const ModalDemo = () => {
     const orderCollection = collection(db, 'orders')
     //seleccionamos el documento
     const orderDoc = await addDoc(orderCollection, newOrder)
-    console.log('orden generau', orderDoc);
   }
 
   return (
