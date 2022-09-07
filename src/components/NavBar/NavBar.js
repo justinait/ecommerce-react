@@ -17,7 +17,7 @@ function NavBar() {
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category'>Productos</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/pet'>Plastico</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/vidrio'>Vidrio</Link>  
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Sobre nosotros</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Nosotros</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Contacto</Link>
 
         {          cartProducts.length > 0 && <CartWidget style={{backgroundColor: "black"}}/>       }
@@ -32,7 +32,7 @@ function NavBar() {
       //     <Navbar.Collapse id="basic-navbar-nav">
       //       <Nav className="me-auto">
       //         <Nav.Link href="/category">Productos</Nav.Link>
-      //         <Nav.Link href="#about">Sobre nosotros</Nav.Link>
+      //         <Nav.Link href="#about">Nosotros</Nav.Link>
       //         <Nav.Link href="#contact">Contacto</Nav.Link>
       //         <NavDropdown title="Categoria" id="basic-nav-dropdown">
       //           <NavDropdown.Item href="/category/pet">Plastico</NavDropdown.Item>

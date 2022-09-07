@@ -7,6 +7,7 @@ import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartProvider';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='*' element={ <h1>ERROR 404</h1> } />
 
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
     </div>

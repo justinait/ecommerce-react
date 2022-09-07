@@ -14,7 +14,7 @@ const ItemDetail = ({data}) => {
         <div className='productDetailContainer'>
             
             <div className='imgContainer'>
-                <img src={data.image} alt='{data.name}' width="200"/>
+                <img src={data.image} alt={data.name} width="200"/>
             </div>
 
             <div className="infoAndCount">

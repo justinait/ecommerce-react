@@ -5,10 +5,11 @@ $navbarOptions: #fff;
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: $colorOlive;
     color: $navbarOptions;
     font-weight: bold;
+    padding: 15px;
 }
 
 .rightNavbar {
@@ -16,4 +17,8 @@ $navbarOptions: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar > h1 {
+
 }

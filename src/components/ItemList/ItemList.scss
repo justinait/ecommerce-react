@@ -1,7 +1,11 @@
+* {
+    background-image: "https://elcentronews.net/wp-content/uploads/2021/12/olive-oil-salad-dressing-cooking-olive.jpg";
+}
+
 .productList {    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2% 5%
+    padding: 2% 5%;
 }

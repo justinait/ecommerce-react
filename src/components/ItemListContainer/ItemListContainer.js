@@ -40,7 +40,8 @@ const ItemListContainer = () => {
             .then( (res) => { 
                 setListProducts(res)
             })
-    }, [listProducts])
+            
+    }, [category])      //aca se esta generando el quota exceeded de firebase
 
 
     return(
