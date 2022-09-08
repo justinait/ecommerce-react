@@ -10,6 +10,8 @@ const ItemDetail = ({data}) => {
     //const brand = 'Valle Gran';
     const productTitle = 'Aceite de Oliva Extra Virgen';
     
+    const [amount, setAmount] = useState(0); 
+    
     return(
         
         <div className='productDetailContainer'>
@@ -31,8 +33,9 @@ const ItemDetail = ({data}) => {
                     <h6> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem minus doloribus animi temporibus ipsam repellat voluptatem dolorem. </h6>
 
                 </div>
-                < ItemCount productToAdd={data}/>
 
+                < ItemCount productToAdd={data} setAmount={setAmount}/>
+ 
             </div>
 
         </div>

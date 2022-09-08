@@ -22,7 +22,13 @@ const ModalDemo = () => {
 
   const [order, setOrder] = useState({
     buyer: {},
-    items: cartProducts,
+    //items: cartProducts,
+    items: cartProducts.map((e) => ({
+			id: e.id,
+			title: e.title,
+			price: e.price,
+			amount: e.amount,
+		})),
     date: new Date().toLocaleString(),
     total: 0
     })

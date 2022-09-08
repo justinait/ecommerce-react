@@ -9,17 +9,21 @@ const CartProvider = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalProducts, setTotalProducts] = useState(0)
 
+
     const addItem = (productToAdd, amount) => {
+
+        console.log(productToAdd);
+        productToAdd.amount = amount;
+        console.log(productToAdd);
         
         setTotalPrice(totalPrice + productToAdd.retail);
-
+        
         let isInCart = cartProducts.find(e => e.id === productToAdd.id)
 
         if(!isInCart) {
 
             setTotalProducts(totalProducts + amount)
-            console.log(amount);
-            setTotalPrice(totalPrice + productToAdd.retail);//*amount
+            setTotalPrice(totalPrice + productToAdd.retail*amount);
 
             return setCartProducts(cartProducts => [...cartProducts, productToAdd])
         }
@@ -28,11 +32,10 @@ const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         const newCart = cartProducts.filter((e) => {
-            setTotalPrice(totalPrice - e.retail)
+            setTotalPrice(totalPrice - e.retail*e.amount)
             return e.id != id;
         })
         setCartProducts(newCart);
-        
     }
 
     const clear = () => {   
