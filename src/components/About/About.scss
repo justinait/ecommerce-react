@@ -1,4 +1,12 @@
-.div {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+}
+
+.aboutContainer {
     font-size: 30px;
     padding: 40px;
 }

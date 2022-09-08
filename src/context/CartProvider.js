@@ -9,15 +9,18 @@ const CartProvider = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalProducts, setTotalProducts] = useState(0)
 
-    const addItem = (productToAdd) => {
+    const addItem = (productToAdd, amount) => {
         
         setTotalPrice(totalPrice + productToAdd.retail);
 
         let isInCart = cartProducts.find(e => e.id === productToAdd.id)
 
         if(!isInCart) {
-            //setTotalProducts(totalProducts + amount)
-            setTotalPrice(totalPrice + productToAdd.retail)//retail*amount (o como lo resuelva)
+
+            setTotalProducts(totalProducts + amount)
+            console.log(amount);
+            setTotalPrice(totalPrice + productToAdd.retail);//*amount
+
             return setCartProducts(cartProducts => [...cartProducts, productToAdd])
         }
         

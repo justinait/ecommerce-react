@@ -1,18 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount"
 import Button from 'react-bootstrap/Button';
 import './ItemDetail.css'
+import { CartContext } from "../../context/CartProvider";
 
 const ItemDetail = ({data}) => {
+    
     //const brand = 'Valle Gran';
     const productTitle = 'Aceite de Oliva Extra Virgen';
-    const [amount, setAmount] = useState(0);
-
-    const optionsAfterAddingProduct = <>
-        <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link>
-        <Link to='/category'> <Button variant="outline-dark"> Continuar comprando </Button> </Link>
-    </>
     
     return(
         
@@ -35,11 +31,7 @@ const ItemDetail = ({data}) => {
                     <h6> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem minus doloribus animi temporibus ipsam repellat voluptatem dolorem. </h6>
 
                 </div>
-
-                {
-                    ( amount > 0) ? optionsAfterAddingProduct : 
-                    < ItemCount setAmount={setAmount} productToAdd={data}/>        
-                }
+                < ItemCount productToAdd={data}/>
 
             </div>
 
