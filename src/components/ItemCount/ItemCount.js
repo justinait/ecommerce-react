@@ -7,11 +7,14 @@ import './ItemCount.css'
 const ItemCount = ({ productToAdd, setAmount }) => {
     
     const [count, setCount] = useState(1);
+    const [added, setAdded] = useState(false);
+
     const { addItem } = useContext(CartContext)
     
     const addToCart = (count) => {
         setAmount( count );
         addItem(productToAdd, count);
+        setAdded(true);
     }
     function onAdd () {
         if ( productToAdd.stock > count ){
@@ -35,12 +38,10 @@ const ItemCount = ({ productToAdd, setAmount }) => {
                 <button onClick={ onRemove }> - </button>
             </div>
 
-            <Button variant="outline-dark" onClick={() => addToCart(count)}> Agregar al carrito </Button>
-
-            {   //( amount > 0) ? optionsAfterAddingProduct : <Button variant="outline-dark" onClick={addToCart(count)}> Agregar al carrito </Button>
-                // added && 
-                //optionsAfterAddingProduct
+            {
+                added ? optionsAfterAddingProduct : <Button variant="outline-dark" onClick={() => addToCart(count)}> Agregar al carrito </Button>
             }
+            
         </div>
     );
 };
