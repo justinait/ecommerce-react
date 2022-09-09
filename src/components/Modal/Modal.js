@@ -21,16 +21,16 @@ const ModalDemo = () => {
     }])
 
   const [order, setOrder] = useState({
-    buyer: {},
+    buyer: {formData},
     //items: cartProducts,
     items: cartProducts.map((e) => ({
 			id: e.id,
-			title: e.title,
-			price: e.price,
+			name: e.name,
+			retail: e.retail,
 			amount: e.amount,
 		})),
     date: new Date().toLocaleString(),
-    total: 0
+    total: totalPrice
     })
 
   const handleClose = () => setShow(false);
