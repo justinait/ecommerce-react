@@ -10,7 +10,7 @@ import db from '../../firebaseConfig';
 
 const ModalDemo = () => {
 
-  const { cartProducts, totalPrice } = useContext(CartContext)
+  const { cartProducts, totalPrice, clear } = useContext(CartContext)
 
   const [show, setShow] = useState(false);
 
@@ -36,15 +36,15 @@ const ModalDemo = () => {
   }
 
   const handleOrder = (e) => {
-    e.preventDefault();   //pq sino al submitear un formulario se recarga la pagina
+    e.preventDefault();
     pushData({...order, buyer: formData});
+    clear();
     handleClose();
   }
 
   const pushData = async (newOrder) => {
-    const orderCollection = collection(db, 'orders')
-    //seleccionamos el documento
-    const orderDoc = await addDoc(orderCollection, newOrder)
+    const orderCollection = collection(db, 'orders');
+    const orderDoc = await addDoc(orderCollection, newOrder);
   }
 
   return (

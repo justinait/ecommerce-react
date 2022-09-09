@@ -1,9 +1,6 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount"
-import Button from 'react-bootstrap/Button';
 import './ItemDetail.css'
-import { CartContext } from "../../context/CartProvider";
 
 const ItemDetail = ({data}) => {
     
@@ -30,7 +27,7 @@ const ItemDetail = ({data}) => {
 
                     </div>
                     
-                    <h6> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem minus doloribus animi temporibus ipsam repellat voluptatem dolorem. </h6>
+                    <h6> {data.description} </h6>
 
                 </div>
 

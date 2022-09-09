@@ -12,9 +12,7 @@ const CartProvider = ({ children }) => {
 
     const addItem = (productToAdd, amount) => {
 
-        console.log(productToAdd);
         productToAdd.amount = amount;
-        console.log(productToAdd);
         
         setTotalPrice(totalPrice + productToAdd.retail);
         

@@ -27,25 +27,6 @@ function NavBar() {
       </div>
     </div>
     
-      // <Navbar bg="light" expand="lg">
-      //   <Container>
-      //     <Navbar.Brand href="/">Aceite de Oliva</Navbar.Brand>
-      //     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      //     <Navbar.Collapse id="basic-navbar-nav">
-      //       <Nav className="me-auto">
-      //         <Nav.Link href="/category">Productos</Nav.Link>
-      //         <Nav.Link href="#about">Nosotros</Nav.Link>
-      //         <Nav.Link href="#contact">Contacto</Nav.Link>
-      //         <NavDropdown title="Categoria" id="basic-nav-dropdown">
-      //           <NavDropdown.Item href="/category/pet">Plastico</NavDropdown.Item>
-      //           <NavDropdown.Item href="/category/vidrio">Vidrio</NavDropdown.Item>
-      //         </NavDropdown>
-      //       </Nav>
-      //     </Navbar.Collapse>
-      //   </Container>
-      //   {          cartProducts.length > 0 && <CartWidget />       }
-      // </Navbar>
-    
   );
 }
 

@@ -29,6 +29,7 @@ const CartWidget = () => {
                                 <div className='mainDetails'>
                                     <h2> {e.name} </h2>
                                     <h3> $ {e.retail} </h3>
+                                    <h3> Cantidad: {e.amount}</h3>
                                     <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
                                 </div>
                                 

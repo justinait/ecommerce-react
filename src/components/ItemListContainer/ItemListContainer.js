@@ -24,7 +24,7 @@ const ItemListContainer = () => {
 
             let categoryList = productList.filter( (e) => {
                 return e.category == category
-            })//devuelve una lista de productos donde todos tienen como category la misma del params.
+            })
             
             return categoryList
         } 
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
                 setListProducts(res)
             })
             
-    }, [category])      //aca se esta generando el quota exceeded de firebase
+    }, [category])
 
 
     return(
