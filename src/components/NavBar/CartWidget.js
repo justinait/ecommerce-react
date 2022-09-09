@@ -7,14 +7,14 @@ import '../Cart/Cart.css'
 import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-    const { cartProducts, removeItem } = useContext(CartContext)
+    const { cartProducts, totalProducts, removeItem } = useContext(CartContext)
     
     return (
         <div>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic"  className='cartIcon'>
                     <BsCartFill/>
-                    <p>{cartProducts.length}</p>
+                    <p>{totalProducts}</p>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className='widgetContainer'>
                     

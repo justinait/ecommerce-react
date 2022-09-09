@@ -6,7 +6,7 @@ import './Cart.css'
 import ModalDemo from '../Modal/Modal';
 
 const Cart = () => {
-    const { cartProducts, removeItem, clear, totalPrice } = useContext(CartContext)
+    const { cartProducts, totalProducts, removeItem, clear, totalPrice } = useContext(CartContext)
     
     const ifCartIsNotEmpty = <div className='ifCartIsNotEmpty'>
         <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
@@ -20,7 +20,7 @@ const Cart = () => {
         <div>
 
             {
-                cartProducts.length > 0 ? 
+                totalProducts ? 
                 ifCartIsNotEmpty : 
                 <Link to='/category' style = {{textDecoration: "none", color: 'black'}}> Ver los productos </Link>
             }

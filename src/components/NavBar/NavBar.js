@@ -6,7 +6,7 @@ import './NavBar.css'
 
 function NavBar() {
 
-  const { cartProducts } = useContext(CartContext);
+  const { totalProducts } = useContext(CartContext);
 
   return (
     <div className="navbar">
@@ -20,7 +20,9 @@ function NavBar() {
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Nosotros</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/'>Contacto</Link>
 
-        {          cartProducts.length > 0 && <CartWidget style={{backgroundColor: "black"}}/>       }
+        {          
+          totalProducts ? <CartWidget/> : ''
+        }
 
       </div>
     </div>
