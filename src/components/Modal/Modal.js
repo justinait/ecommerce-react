@@ -14,15 +14,10 @@ const ModalDemo = () => {
 
   const [show, setShow] = useState(false);
 
-  const [formData, setFormData] = useState([{
-    name: '',
-    email: '',
-    phone: 0
-    }])
+  const [formData, setFormData] = useState([])
 
   const [order, setOrder] = useState({
     buyer: {formData},
-    //items: cartProducts,
     items: cartProducts.map((e) => ({
 			id: e.id,
 			name: e.name,
