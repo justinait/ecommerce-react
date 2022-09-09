@@ -5,7 +5,6 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartProvider';
-import Home from './components/Home/Home';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 
@@ -17,7 +16,7 @@ function App() {
           < NavBar />
           <Routes>
 
-            <Route path='/' element={< Home />} />
+            <Route path='/' element={< ItemListContainer />} />
 
             <Route path='/category/:category' element={< ItemListContainer />} />
             <Route path='/category' element={< ItemListContainer />} />
