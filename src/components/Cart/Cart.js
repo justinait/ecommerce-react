@@ -7,15 +7,21 @@ import ModalDemo from '../Modal/Modal';
 
 const Cart = () => {
     const { cartProducts, removeItem, clear, totalPrice } = useContext(CartContext)
+    
+    const ifCartIsNotEmpty = <div className='ifCartIsNotEmpty'>
+        <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
+        <div className='paymentOptions'>
+            <h2>Total a pagar: ${totalPrice}</h2>
+            <ModalDemo />
+        </div>
+    </div>
 
     return (
         <div>
 
-            <ModalDemo />
-            
             {
                 cartProducts.length > 0 ? 
-                <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button> : 
+                ifCartIsNotEmpty : 
                 <Link to='/category' style = {{textDecoration: "none", color: 'black'}}> Ver los productos </Link>
             }
             <div>
@@ -39,7 +45,10 @@ const Cart = () => {
             }
             </div>
 
-            <h2>TOTAL DE LA COMPRA: ${totalPrice}</h2>
+            {
+                totalPrice > 0 ? ifCartIsNotEmpty : <h2>No hay nada en tu carrito!</h2>
+            }
+            
             
         </div>
     );

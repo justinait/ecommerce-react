@@ -28,3 +28,16 @@
     border: solid grey 1px;
     border-radius: 2%
 }
+
+.ifCartIsNotEmpty {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.paymentOptions{
+    display: flex;
+    width: 36%;
+    justify-content: space-around;
+    align-items: flex-start;
+}

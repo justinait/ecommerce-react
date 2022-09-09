@@ -10,7 +10,7 @@ import db from '../../firebaseConfig';
 
 const ModalDemo = () => {
 
-  const { cartProducts } = useContext(CartContext)
+  const { cartProducts, totalPrice } = useContext(CartContext)
 
   const [show, setShow] = useState(false);
 
@@ -54,10 +54,9 @@ const ModalDemo = () => {
 
   return (
     <>
-        <Button variant="primary" onClick={handleShow}>
-          Pagar
-        </Button>
-            
+      {
+        totalPrice > 0 && <Button variant="primary" onClick={handleShow}>Pagar</Button>
+      }
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Completa tus datos</Modal.Title>
