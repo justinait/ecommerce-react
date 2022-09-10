@@ -28,7 +28,7 @@ const Cart = () => {
             {
                 cartProducts.map((e) => {
                     return (
-                        <div key={e.id.toString()} >
+                        <div key={e.id} >
                             <div className='cartContainer'>
                                 <div className='mainDetails'>
                                     <h1> {e.name} </h1>
@@ -36,6 +36,7 @@ const Cart = () => {
                                 </div>
                                 <h3> $ {e.retail} </h3>
                                 <h3> {e.amount} </h3>
+                                <h3> ${e.amount * e.retail} </h3>
                                 <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
                             </div>
                             

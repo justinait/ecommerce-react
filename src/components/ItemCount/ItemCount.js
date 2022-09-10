@@ -1,4 +1,4 @@
-import {useState, React, useContext } from 'react';
+import {useState, React, useContext, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartProvider';
@@ -16,6 +16,11 @@ const ItemCount = ({ productToAdd, setAmount }) => {
         addItem(productToAdd, count);
         setAdded(true);
     }
+
+    // useEffect(()=> {
+    //     addItem();
+    // }, [added])
+    
     function onAdd () {
         if ( productToAdd.stock > count ){
             return setCount(count+1);

@@ -21,9 +21,8 @@ const CartWidget = () => {
                     <Link to='/cart' style = {{textDecoration: "none", color: 'black'}}> IR A TU CARRITO </Link>
 
                     {
-                    cartProducts.map((e) => (                      
-                    
-                        <div key={e.id.toString()} >
+                    cartProducts.map((e) => ( 
+                        <div key={e.id} >
                             <div className='widgetItemContainer'>
                                 <img className='widgetImage' src={e.image} alt={e.name} />
                                 <div className='mainDetails'>
