@@ -6,7 +6,6 @@ const ItemDetail = ({data}) => {
     
     //const brand = 'Valle Gran';
     const productTitle = 'Aceite de Oliva Extra Virgen';
-    
     const [amount, setAmount] = useState(0); 
     
     return(

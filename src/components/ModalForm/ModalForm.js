@@ -7,8 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import { CartContext } from '../../context/CartProvider';
 import db from '../../firebaseConfig';
 
-
-const ModalDemo = () => {
+const ModalForm = () => {
 
   const { cartProducts, totalPrice, clear } = useContext(CartContext)
 
@@ -114,4 +113,4 @@ const ModalDemo = () => {
   );
 }
 
-export default ModalDemo;
+export default ModalForm;

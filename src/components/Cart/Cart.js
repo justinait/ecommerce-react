@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 import { CartContext } from '../../context/CartProvider';
 import './Cart.css'
-import ModalDemo from '../Modal/Modal';
+import ModalForm from '../ModalForm/ModalForm';
 
 const Cart = () => {
     const { cartProducts, totalProducts, removeItem, clear, totalPrice } = useContext(CartContext)
@@ -12,7 +12,7 @@ const Cart = () => {
         <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
         <div className='paymentOptions'>
             <h2>Total a pagar: ${totalPrice}</h2>
-            <ModalDemo />
+            <ModalForm />
         </div>
     </div>
 
