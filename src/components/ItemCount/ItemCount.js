@@ -17,10 +17,6 @@ const ItemCount = ({ productToAdd, setAmount }) => {
         setAdded(true);
     }
 
-    // useEffect(()=> {
-    //     addItem();
-    // }, [added])
-    
     function onAdd () {
         if ( productToAdd.stock > count ){
             return setCount(count+1);
