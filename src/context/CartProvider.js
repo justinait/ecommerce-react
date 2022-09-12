@@ -38,10 +38,15 @@ const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         const newCart = cartProducts.filter((e) => {
-            setTotalPrice(totalPrice - e.retail*e.amount);
             return e.id != id;
         })
         setCartProducts(newCart);
+
+        const product = cartProducts.find(e => e.id == id)
+
+        setTotalProducts(totalProducts - product.amount);
+        setTotalPrice(totalPrice - product.retail*product.amount);
+        
     }
 
     const clear = () => {   
