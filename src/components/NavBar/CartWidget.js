@@ -7,7 +7,7 @@ import '../Cart/Cart.css'
 import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-    const { cartProducts, totalProducts, removeItem } = useContext(CartContext)
+    const { cartProducts, totalProducts, removeItem, totalPrice } = useContext(CartContext)
     
     return (
         <div>
@@ -19,7 +19,8 @@ const CartWidget = () => {
                 <Dropdown.Menu className='widgetContainer'>
                     
                     <Link to='/cart' style = {{textDecoration: "none", color: 'black'}}> IR A TU CARRITO </Link>
-
+                    <h6>{totalPrice}</h6>
+                    
                     {
                     cartProducts.map((e) => ( 
                         <div key={e.id} >

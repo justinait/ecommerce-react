@@ -1,0 +1,17 @@
+.footer {
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f1f1f1;
+  border-top: 1px solid #2E3646;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  bottom: 0;
+}
+/*# sourceMappingURL=Footer.css.map */
