@@ -3,9 +3,9 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <footer className='footer'>
         © 2018 | Aceite de Oliva Parana S.A. | Todos los derechos reservados
-    </div>
+    </footer>
   )
 }
 
