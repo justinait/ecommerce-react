@@ -13,5 +13,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 /*# sourceMappingURL=Footer.css.map */

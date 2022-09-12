@@ -19,7 +19,7 @@ const CartWidget = () => {
                 <Dropdown.Menu className='widgetContainer'>
                     
                     <Link to='/cart' style = {{textDecoration: "none", color: 'black'}}> IR A TU CARRITO </Link>
-                    <h6>{totalPrice}</h6>
+                    <h6>${totalPrice}</h6>
                     
                     {
                     cartProducts.map((e) => ( 

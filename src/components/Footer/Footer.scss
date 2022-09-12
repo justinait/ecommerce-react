@@ -3,9 +3,9 @@
     display: flex;
     background-color: #f1f1f1;
     border-top: 1px solid #2E3646;
-
     flex-direction: column;
     justify-content: space-evenly;  
     bottom: 0;
-
+    position: absolute;
+    width: 100%;
 }
