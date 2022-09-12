@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemDetail.css'
 
@@ -7,7 +9,12 @@ const ItemDetail = ({data}) => {
     //const brand = 'Valle Gran';
     const productTitle = 'Aceite de Oliva Extra Virgen';
     const [amount, setAmount] = useState(0); 
-    
+
+    const optionsAfterAddingProduct = <>
+        <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link>
+        <Link to='/category'> <Button variant="outline-dark"> Continuar comprando </Button> </Link>
+    </>
+
     return(
         
         <div className='productDetailContainer'>
@@ -30,7 +37,9 @@ const ItemDetail = ({data}) => {
 
                 </div>
 
-                < ItemCount productToAdd={data} setAmount={setAmount}/>
+                {
+                    !amount ? < ItemCount productToAdd={data} setAmount={setAmount}/> : optionsAfterAddingProduct
+                }
  
             </div>
 
