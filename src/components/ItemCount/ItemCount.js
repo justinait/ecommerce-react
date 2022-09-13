@@ -1,20 +1,17 @@
-import {useState, React, useContext, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {useState, React, useContext } from 'react';
+import { Button } from 'react-bootstrap'
 import { CartContext } from '../../context/CartProvider';
 import './ItemCount.css'
 
 const ItemCount = ({ productToAdd, setAmount }) => {
     
     const [count, setCount] = useState(1);
-    const [added, setAdded] = useState(false);
 
     const { addItem } = useContext(CartContext)
     
     const addToCart = (count) => {
         setAmount( count );
         addItem(productToAdd, count);
-        setAdded(true);
     }
 
     function onAdd () {
@@ -26,10 +23,6 @@ const ItemCount = ({ productToAdd, setAmount }) => {
     function onRemove () {
         if( count > 0)   setCount ( count - 1 )
     }
-    const optionsAfterAddingProduct = <>
-        <Link to='/cart'> <Button variant="outline-dark"> Terminar compra </Button> </Link>
-        <Link to='/category'> <Button variant="outline-dark"> Continuar comprando </Button> </Link>
-    </>
 
     return (
         <div>
