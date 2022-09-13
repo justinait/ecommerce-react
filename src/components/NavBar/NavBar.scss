@@ -3,6 +3,18 @@ $colorOliveHover: #7c8047;
 $secondaryColor: #86895d;
 $navbarOptions: #fff;
 
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-family: bebas neue;
+}
+
+h2, h3 {
+    font-family: montserrat;
+}
+  
 .navbar {
     display: flex;
     justify-content: space-between;
