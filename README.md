@@ -1,7 +1,10 @@
+# GIF showing navigation
+![gif](https://user-images.githubusercontent.com/81998551/189845175-b593f77f-f6c1-4bcd-be90-0f1668d76fc8.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![gif](https://user-images.githubusercontent.com/81998551/189740586-8be742f1-3cef-486e-bcd7-ed64863f271d.gif)
 
 ## Available Scripts
 
