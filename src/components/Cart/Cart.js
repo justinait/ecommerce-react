@@ -4,52 +4,43 @@ import { Button } from 'react-bootstrap';
 import { CartContext } from '../../context/CartProvider';
 import './Cart.css'
 import ModalForm from '../ModalForm/ModalForm';
+import CartTable from './CartTable';
 
 const Cart = () => {
-    const { cartProducts, totalProducts, removeItem, clear, totalPrice } = useContext(CartContext)
+    const { totalProducts, clear, totalPrice } = useContext(CartContext)
     
-    const ifCartIsNotEmpty = <div className='ifCartIsNotEmpty'>
-        <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
-        <div className='paymentOptions'>
-            <h2>Total a pagar: ${totalPrice}</h2>
-            <ModalForm />
+    const fullCartOptions = <>
+        <div className='ifCartIsNotEmpty'>
+            <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
+            <div className='paymentOptions'>
+                <h3>Total a pagar: ${totalPrice}</h3>
+                <ModalForm />
+            </div>
         </div>
-    </div>
+    </>
+
+    const ifCartIsFull = <>
+        {fullCartOptions}
+        <CartTable />
+        {fullCartOptions}
+    </>
+
+    const ifCartIsEmpty = <>
+        <Link to='/category' style = {{textDecoration: "none", color: 'black'}}> Ver los productos </Link>
+        <div className="emptyCart">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYiAiefKh9pGuGtLJV82J2iLb0cMJ5V45XL4xr6DllBJeeMn2Q329k0gAS3cZJ_yMit3c&usqp=CAU"/>
+            <h2>No hay nada en tu carrito!</h2>
+            <Link to='/category' style = {{textDecoration: "none", color: 'black'}}> Explorar </Link>
+        </div>
+    </>
 
     return (
         <div>
-
             {
                 totalProducts ? 
-                ifCartIsNotEmpty : 
-                <Link to='/category' style = {{textDecoration: "none", color: 'black'}}> Ver los productos </Link>
+                ifCartIsFull : 
+                ifCartIsEmpty
             }
-            <div>
-            {
-                cartProducts.map((e) => {
-                    return (
-                        <div key={e.id} >
-                            <div className='cartContainer'>
-                                <div className='mainDetails'>
-                                    <h1> {e.name} </h1>
-                                    <img src={e.image} alt={e.name} width="200"/>
-                                </div>
-                                <h3> $ {e.retail} </h3>
-                                <h3> {e.amount} </h3>
-                                <h3> ${e.amount * e.retail} </h3>
-                                <Button variant="outline-dark" onClick={()=> removeItem(e.id)}> Eliminar </Button>
-                            </div>
-                            
-                        </div>
-                    )
-                })
-            }
-            </div>
-
-            {
-                totalPrice > 0 ? ifCartIsNotEmpty : <h2>No hay nada en tu carrito!</h2>
-            }
-            
             
         </div>
     );

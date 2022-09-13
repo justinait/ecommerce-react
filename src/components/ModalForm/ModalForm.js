@@ -49,7 +49,7 @@ const ModalForm = () => {
   return (
     <>
       {
-        totalPrice > 0 && <Button variant="primary" onClick={handleShow}>Pagar</Button>
+        totalPrice > 0 && <Button variant="dark" onClick={handleShow}>Pagar</Button>
       }
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
