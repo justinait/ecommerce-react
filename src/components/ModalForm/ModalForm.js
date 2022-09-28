@@ -60,17 +60,17 @@ const ModalForm = () => {
   const handleShowOrderModal = () => setShowOrderModal(true);
 
   const successMessage = 
-        <Modal show={showOrderModal} onHide={handleCloseOrderModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Su compra se ha realizado con exito!</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>El id de su orden es {success}</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseOrderModal}>
-              OK
-            </Button>
-          </Modal.Footer>
-        </Modal>
+    <Modal show={showOrderModal} onHide={handleCloseOrderModal}>
+      <Modal.Header closeButton>
+        <Modal.Title>Su compra se ha realizado con exito!</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>El id de su orden es {success}</Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleCloseOrderModal}>
+          OK
+        </Button>
+      </Modal.Footer>
+    </Modal>
 
   return (
     <div>
