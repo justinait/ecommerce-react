@@ -15,7 +15,6 @@ const ModalForm = () => {
 
   const [formData, setFormData] = useState([]);
   const [success, setSuccess] = useState('');
-  const [confirmation, setConfirmation] = useState(false);
 
   const [order, setOrder] = useState({
     buyer: {formData},
@@ -39,7 +38,6 @@ const ModalForm = () => {
   const handleOrder = (e) => {
     e.preventDefault();
     pushData({...order, buyer: formData});
-    setConfirmation(true);
     clear();
     handleClose();
   }
@@ -50,13 +48,18 @@ const ModalForm = () => {
     setSuccess(orderDoc.id);
   }
 
+  const successMessage = <>
+    <h2>Su compra se ha realizado con exito!</h2>
+    <h4>El id de su orden es {success}</h4>
+  </>
+
   return (
     <div>
       {
         totalPrice > 0 && <Button variant="dark" onClick={handleShow}>Pagar</Button>
       }
       {
-      success ? success : (
+      success ? successMessage : (
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Completa tus datos</Modal.Title>
