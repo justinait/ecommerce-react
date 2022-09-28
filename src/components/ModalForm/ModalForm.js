@@ -46,12 +46,31 @@ const ModalForm = () => {
     const orderCollection = collection(db, 'orders');
     const orderDoc = await addDoc(orderCollection, newOrder);
     setSuccess(orderDoc.id);
+    handleShowOrderModal();
   }
 
-  const successMessage = <>
-    <h2>Su compra se ha realizado con exito!</h2>
-    <h4>El id de su orden es {success}</h4>
-  </>
+  // const successMessage = <>
+  //   <h2>Su compra se ha realizado con exito!</h2>
+  //   <h4>El id de su orden es {success}</h4>
+  // </>
+
+  const [showOrderModal, setShowOrderModal] = useState(false);
+  
+  const handleCloseOrderModal = () => setShowOrderModal(false);
+  const handleShowOrderModal = () => setShowOrderModal(true);
+
+  const successMessage = 
+        <Modal show={showOrderModal} onHide={handleCloseOrderModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Su compra se ha realizado con exito!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>El id de su orden es {success}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseOrderModal}>
+              OK
+            </Button>
+          </Modal.Footer>
+        </Modal>
 
   return (
     <div>
