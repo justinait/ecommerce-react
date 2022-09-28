@@ -13,7 +13,9 @@ const ModalForm = () => {
 
   const [show, setShow] = useState(false);
 
-  const [formData, setFormData] = useState([])
+  const [formData, setFormData] = useState([]);
+  const [success, setSuccess] = useState('');
+  const [confirmation, setConfirmation] = useState(false);
 
   const [order, setOrder] = useState({
     buyer: {formData},
@@ -25,7 +27,7 @@ const ModalForm = () => {
 		})),
     date: new Date().toLocaleString(),
     total: totalPrice
-    })
+  })
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -37,6 +39,7 @@ const ModalForm = () => {
   const handleOrder = (e) => {
     e.preventDefault();
     pushData({...order, buyer: formData});
+    setConfirmation(true);
     clear();
     handleClose();
   }
@@ -44,13 +47,16 @@ const ModalForm = () => {
   const pushData = async (newOrder) => {
     const orderCollection = collection(db, 'orders');
     const orderDoc = await addDoc(orderCollection, newOrder);
+    setSuccess(orderDoc.id);
   }
 
   return (
-    <>
+    <div>
       {
         totalPrice > 0 && <Button variant="dark" onClick={handleShow}>Pagar</Button>
       }
+      {
+      success ? success : (
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Completa tus datos</Modal.Title>
@@ -108,8 +114,9 @@ const ModalForm = () => {
             Guardar
           </Button>
         </Modal.Footer>
-      </Modal>
-    </>
+      </Modal>)
+      }
+    </div>
   );
 }
 

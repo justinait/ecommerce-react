@@ -14,7 +14,7 @@ const Cart = () => {
             <Button variant="outline-dark" onClick={ clear }> Vaciar carrito </Button>
             <div className='paymentOptions'>
                 <h3>Total a pagar: ${totalPrice}</h3>
-                <ModalForm />
+                {/* <ModalForm /> */}
             </div>
         </div>
     </>
@@ -41,6 +41,7 @@ const Cart = () => {
                 ifCartIsFull : 
                 ifCartIsEmpty
             }
+            <ModalForm />
             
         </div>
     );
