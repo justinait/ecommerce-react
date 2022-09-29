@@ -11,8 +11,8 @@ const Item = ({data}) => {
             
             <Link to={`/item/${data.id}`}  style = {{textDecoration: "none", color: 'black'}}>
                 <img src={image} alt={name} className='productImg' />
-                <h4>{name}</h4>
-                <h5>${retail}</h5>
+                <h3>{name}</h3>
+                <h2>${retail}</h2>
             </Link>
 
         </div>

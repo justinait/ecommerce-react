@@ -15,6 +15,14 @@
     height: 55%;
 }
 
+h2, h3  {
+    font-weight: bold;
+}
+
+h2 {
+    color: #818735//$colorOlive;
+}
+
 @media (min-width: 1200px) {
     .productContainer {
         width: 22%;
