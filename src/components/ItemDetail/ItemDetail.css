@@ -10,27 +10,31 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 80px;
+  padding: 6%;
+  align-items: center;
 }
 
-.imgContainer {
-  width: 65%;
-  text-align: right;
-  margin-right: 75px;
-  margin-left: -160px;
-}
 
 .imgContainer > img {
   padding: 10% 8%;
-  width: 50%;
   border: 1px solid #86895d;
 }
 
 .infoContainer {
-  width: 50%;
+  width: 34vw;
 }
-/*# sourceMappingURL=ItemDetail.css.map */
+
+.infoAndCount {
+  padding: 5%;
+}
+
+@media (min-width:580px) {
+  .productDetailContainer {
+    flex-direction: row;
+  }
+ 
+}
