@@ -1,6 +1,6 @@
 .productContainer {
-  width: 65%;
-  max-height: 30%;
+  width: 80%;
+  height: 50vh;
   border: 1px solid black;
   margin: 10px;
 }
@@ -12,6 +12,8 @@
 .productInfo {
   width: 90%;
   margin: 5%;
+  height: 30%;
+  margin-top: 15%;
 }
 
 img,
@@ -20,13 +22,13 @@ img,
 }
 
 img {
-  max-height: 80%;
-  width: 70%;
-  margin: 15%;
+  max-height: 95%;
 }
 
 .productImg {
-  height: 60%;
+  height: 50%;
+  text-align: center;
+  margin-top: 10%;
 }
 
 h2, h3 {
