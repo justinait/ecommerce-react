@@ -14,11 +14,11 @@ function NavBar() {
 
       <div className='rightNavbar'>
 
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category'>Productos</Link>
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/aceitunas'>Aceitunas</Link>
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/aceite'>Aceite de Oliva</Link>  
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Nosotros</Link>
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/contact'>Contacto</Link>
+        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category'>Productos</Link>
+        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category/aceitunas'>Aceitunas</Link>
+        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category/aceite'>Aceite de Oliva</Link>  
+        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/about'>Nosotros</Link>
+        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/contact'>Contacto</Link>
 
         {          
           totalProducts ? <CartWidget/> : ''
