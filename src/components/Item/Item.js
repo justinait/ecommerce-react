@@ -10,15 +10,17 @@ const Item = ({data}) => {
         <div className='productContainer'>
             
             <Link to={`/item/${data.id}`}  style = {{textDecoration: "none", color: 'black'}}>
-                <img src={image} alt={name} className='productImg' />
-
-                {
-                    category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
-                }
+                <div className='productImg' >
+                    <img src={image} alt={name} />
+                </div>
                 
-                <h3>{name}</h3>
-                <h2>${retail}</h2>
-                
+                <div className='productInfo'>
+                    {
+                        category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
+                    }
+                    <h3>{name}</h3>
+                    <h2>${retail}</h2>
+                </div>
             </Link>
 
         </div>

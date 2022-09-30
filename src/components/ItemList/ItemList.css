@@ -10,23 +10,6 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 2% 5%;
-}
-
-@media (min-width: 1200px) {
-  .productList {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding: 2% 5%;
-  }
+  padding: 5% 8%;
 }
 /*# sourceMappingURL=ItemList.css.map */
