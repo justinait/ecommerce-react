@@ -11,9 +11,14 @@ const Item = ({data}) => {
             
             <Link to={`/item/${data.id}`}  style = {{textDecoration: "none", color: 'black'}}>
                 <img src={image} alt={name} className='productImg' />
-                <h3>{category}</h3>
+
+                {
+                    category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
+                }
+                
                 <h3>{name}</h3>
                 <h2>${retail}</h2>
+                
             </Link>
 
         </div>

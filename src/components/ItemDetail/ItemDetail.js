@@ -27,8 +27,10 @@ const ItemDetail = ({data}) => {
                 <div className='infoContainer'>
                     <div className = 'mainInfo'>
                         <h1> {data.name} </h1>
-                        {/* <h2> {brand} </h2> */}
-                        <h2> {productTitle} </h2>
+                        {
+                            data.category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
+                        }
+                        
                         <p className='price'>$ {data.retail} </p>
 
                     </div>

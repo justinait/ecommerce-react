@@ -31,8 +31,12 @@ function CartTable() {
                 <tr key={e.id}>
                     <td> {i+1} </td>
                     <td> 
-                        {e.name} 
-                        <img src={e.image} alt={e.name} width="150"/>
+                      
+                      {
+                          e.category == 'aceite' ? 'Aceite de Oliva ' : 'Aceitunas '
+                      }
+                      {e.name} 
+                      <img src={e.image} alt={e.name} width="150"/>
                     </td>
                     <td> $ {e.retail} </td>
                     <td> {e.amount} </td>
