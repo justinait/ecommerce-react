@@ -10,13 +10,13 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <Link style = {{textDecoration: "none", color: 'black'}} to='/'><h1>Aceite de Oliva</h1></Link>
+      <Link style = {{textDecoration: "none", color: 'black'}} to='/'><h1>oliva litoral</h1></Link>
 
       <div className='rightNavbar'>
 
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category'>Productos</Link>
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/pet'>Plastico</Link>
-        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/vidrio'>Vidrio</Link>  
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/aceitunas'>Aceitunas</Link>
+        <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/category/aceite'>Aceite de Oliva</Link>  
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/about'>Nosotros</Link>
         <Link style = {{textDecoration: "none", color: 'white', fontWeight: 'bold'}} to='/contact'>Contacto</Link>
 
