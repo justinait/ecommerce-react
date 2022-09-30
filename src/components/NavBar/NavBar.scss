@@ -17,16 +17,26 @@ h2, h3 {
   
 .navbar {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: $colorOlive;
     color: $navbarOptions;
-    font-weight: bold;
     padding: 15px;
 }
 
 .rightNavbar {
-    width: 50%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width:900px) {
+    .rightNavbar {
+        width: 50%;
+    }
+    
+    .navbar {
+        flex-direction: row;
+    }
 }
