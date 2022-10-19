@@ -1,5 +1,6 @@
 # GIF showing navigation
-![gif](https://user-images.githubusercontent.com/81998551/189845175-b593f77f-f6c1-4bcd-be90-0f1668d76fc8.gif)
+![gif](https://user-images.githubusercontent.com/81998551/196628695-af6beff7-6b3b-4dfd-b5fe-77a91e705768.gif)
+
 
 
 # Getting Started with Create React App
