@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/CartProvider';
 import CartWidget from './CartWidget';
 import './NavBar.css'
@@ -10,15 +10,15 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <Link style = {{textDecoration: "none", color: 'black'}} to='/'><h1>oliva litoral</h1></Link>
+      <NavLink style = {{textDecoration: "none", color: 'black'}} to='/'><h1>oliva litoral</h1></NavLink>
 
       <div className='rightNavbar'>
 
-        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category'>Productos</Link>
-        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category/aceitunas'>Aceitunas</Link>
-        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/category/aceite'>Aceite de Oliva</Link>  
-        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/about'>Nosotros</Link>
-        <Link style = {{textDecoration: "none", color: 'black', fontSize: "17px"}} to='/contact'>Contacto</Link>
+        <NavLink className='navbarOptions' to='/category'>Productos</NavLink>
+        <NavLink className='navbarOptions' to='/category/aceitunas'>Aceitunas</NavLink>
+        <NavLink className='navbarOptions' to='/category/aceite'>Aceite de Oliva</NavLink>  
+        <NavLink className='navbarOptions' to='/about'>Nosotros</NavLink>
+        <NavLink className='navbarOptions' to='/contact'>Contacto</NavLink>
 
         {          
           totalProducts ? <CartWidget/> : ''

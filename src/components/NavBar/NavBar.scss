@@ -31,6 +31,20 @@ h2, h3 {
     align-items: center;
 }
 
+.navbarOptions {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.navbarOptions:hover {
+    color:white
+}
+
+.navbarOptions:focus {
+    color:white;
+}
+
 @media (min-width:900px) {
     .rightNavbar {
         width: 50%;
