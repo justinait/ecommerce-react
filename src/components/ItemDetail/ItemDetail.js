@@ -20,13 +20,13 @@ const ItemDetail = ({data}) => {
         <div className='productDetailContainer'>
             
             <div className='imgContainer'>
-                <img src={data.image} alt={data.name} width="200"/>
+                <img src={data.image} alt={data.name} />
             </div>
 
             <div className="infoAndCount">
                 <div className='infoContainer'>
                     <div className = 'mainInfo'>
-                        <h1> {data.name} </h1>
+                        <h3 className="detailInfoName"> {data.name} </h3>
                         {
                             data.category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
                         }
@@ -35,7 +35,7 @@ const ItemDetail = ({data}) => {
 
                     </div>
                     
-                    <h6> {data.description} </h6>
+                    <h6 className="detailDescription"> {data.description} </h6>
 
                 </div>
 

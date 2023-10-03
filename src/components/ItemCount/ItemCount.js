@@ -31,7 +31,7 @@ const ItemCount = ({ productToAdd, setAmount }) => {
                 <p> { count } </p>
                 <button onClick={ onRemove }> - </button>
             </div>
-            <Button variant="outline-dark" onClick={() => addToCart(count)}> Agregar al carrito </Button>
+            <Button variant="outline-dark" onClick={() => addToCart(count)} className='cartButton'> Agregar al carrito </Button>
             
         </div>
     );

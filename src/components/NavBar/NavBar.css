@@ -71,7 +71,7 @@ h2, h3 {
 
 @media (min-width: 900px) {
   .rightNavbar {
-    width: 30%;
+    width: 40%;
   }
   .navbar {
     flex-direction: row;

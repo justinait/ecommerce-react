@@ -1,7 +1,7 @@
 .price {
-  font-size: 3em;
+  
+  font-size: x-large;
   color: #818735;
-  font-weight: bold;
 }
 
 .productDetailContainer {
@@ -14,14 +14,17 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 6%;
+  padding: 15%;
   align-items: center;
 }
 
+.detailDescription {
+  width: 50vw;
+}
 
 .imgContainer > img {
   padding: 10% 8%;
-  border: 1px solid #86895d;
+  width: 250px;
 }
 
 .infoContainer {
@@ -31,9 +34,24 @@
 .infoAndCount {
   padding: 5%;
 }
-
+.detailInfoName {
+  
+  font-size: x-large;
+  font-weight: 800;
+  font-family: 'Red Hat Display';
+}
 @media (min-width:580px) {
   .productDetailContainer {
     flex-direction: row;
+  }
+  .imgContainer > img {
+    padding: 10% 8%;
+    width: 350px;
+  }
+}
+@media (min-width:1000px) {
+  
+  .productDetailContainer {
+    padding: 10%;
   }
 }
