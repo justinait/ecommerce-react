@@ -12,6 +12,30 @@ h2, h3 {
   font-family: montserrat;
 }
 
+.submenu {
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #e5e1c8;
+  z-index: 1;
+  padding: 6%;
+}
+
+.submenu a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Red Hat Display';
+  font-size: large;
+  font-weight: 400;
+  padding: 1%;
+}
+.navbarOptions.active .submenu, .submenu:hover {
+  display: flex;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -19,7 +43,7 @@ h2, h3 {
   background-color: #e5e1c8;
   color: black;
   padding: 15px;
-  height: 15vh;
+  height: 20vh;
 }
 
 .rightNavbar {
@@ -32,13 +56,12 @@ h2, h3 {
 .navbarOptions {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: large;
   font-family: "red hat display";
 }
 
 .navbarOptions:hover {
   color: black;
-  font-weight: 600;
 }
 
 .navbarOptions:focus {
@@ -48,11 +71,18 @@ h2, h3 {
 
 @media (min-width: 900px) {
   .rightNavbar {
-    width: 50%;
+    width: 30%;
   }
   .navbar {
     flex-direction: row;
     height: unset;
     justify-content: space-around;
+  }
+  .navbarOptions {
+    font-size: x-large;
+  }
+  
+  .submenu a {
+    font-size: x-large;
   }
 }/*# sourceMappingURL=NavBar.css.map */
