@@ -18,7 +18,7 @@ const Item = ({data}) => {
                     {
                         category == 'aceite' ? <h3>Aceite de Oliva</h3> : <h3>Aceitunas</h3>
                     }
-                    <h3>{name}</h3>
+                    <h3 className='productInfoName'>{name}</h3>
                     <h2>${retail}</h2>
                 </div>
             </Link>

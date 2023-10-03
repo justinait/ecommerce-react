@@ -50,6 +50,9 @@ h2 {
   align-items: flex-end;
 }
 
+.productInfoName{
+  font-weight: 200;
+}
 @media (min-width: 440px) {
   .productContainer {
     width: 45%;
@@ -59,4 +62,8 @@ h2 {
   .productContainer {
     width: 22%;
   }
-}/*# sourceMappingURL=Item.css.map */
+  .productInfo {
+    font-size: large;
+  }
+}
+/*# sourceMappingURL=Item.css.map */
