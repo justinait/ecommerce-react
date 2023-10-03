@@ -1,9 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
 }
 
@@ -19,5 +18,4 @@
 
 .text {
   text-align: justify;
-}
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */

@@ -1,24 +1,14 @@
 .cartContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0% 2%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .cartIcon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .widgetImage {
@@ -26,11 +16,8 @@
 }
 
 .widgetItemContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 300px;
   border: solid grey 1px;
   border-radius: 2%;
@@ -43,37 +30,20 @@
 }
 
 .ifCartIsNotEmpty {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1%;
 }
 
 .paymentOptions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 36%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .emptyCart {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/*# sourceMappingURL=Cart.css.map */
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=Cart.css.map */

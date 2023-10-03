@@ -1,15 +1,7 @@
 .productList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 5% 8%;
-}
-/*# sourceMappingURL=ItemList.css.map */
+}/*# sourceMappingURL=ItemList.css.map */

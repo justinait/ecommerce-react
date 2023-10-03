@@ -15,24 +15,26 @@ function App() {
       <CartProvider>        
         <BrowserRouter>
           < NavBar />
-          <Routes>
+          <div className='content'>
+            <Routes>
 
-            <Route path='/' element={< ItemListContainer />} />
+              <Route path='/' element={< ItemListContainer />} />
 
-            <Route path='/category/:category' element={< ItemListContainer />} />
-            <Route path='/category' element={< ItemListContainer />} />
-            
-            <Route path='/item/:id' element={< ItemDetailContainer />} />       
+              <Route path='/category/:category' element={< ItemListContainer />} />
+              <Route path='/category' element={< ItemListContainer />} />
+              
+              <Route path='/item/:id' element={< ItemDetailContainer />} />       
 
-            <Route path='/cart' element={< Cart />}/>
+              <Route path='/cart' element={< Cart />}/>
 
-            <Route path='/contact' element={< Contact />}/>
+              <Route path='/contact' element={< Contact />}/>
 
-            <Route path='/about' element={< About />}/>
+              <Route path='/about' element={< About />}/>
 
-            <Route path='*' element={ <h1>ERROR 404</h1> } />
+              <Route path='*' element={ <h1>ERROR 404</h1> } />
 
-          </Routes>
+            </Routes>
+          </div>
           <Footer/>
         </BrowserRouter>
       </CartProvider>
